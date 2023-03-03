@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>홈 화면 | Sample Page </title>
+
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/themify-icons.css">
+    <link rel="stylesheet" href="./assets/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/fonts.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+
+    <!-- script -->
+</head>
+
+<body>
+    <div id="wrap">
+        <header class="header"></header>
+        <!-- Banner section start -->
+        <section id="banner">
+            <div class="ban-img"></div>
+        </section>
+        <footer id="footer">
+            <h2>Current WAS Container Host Name: <%= hostName %></h2>
+         </footer>
+    </div>
+    <!-- script -->
+    <script src="./assets/js/header.js"></script>
+    <script>
+        const cookies = "<%= cookie %>";
+        if (cookies === "false") {
+            document.querySelector(".log").innerHTML = "로그인";
+            document.querySelector(".log").href = "/login";
+        } else {
+            document.querySelector(".log").innerHTML = "로그아웃";
+            document.querySelector(".log").href = "/logout";
+        }
+    </script>
+
+</body>
+
+</html>
